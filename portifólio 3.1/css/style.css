@@ -1,0 +1,425 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+   -webkit-tap-highlight-color: transparent;
+	-o-tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent;
+	-ms-tap-highlight-color: transparent;
+	text-decoration: none ;
+	scroll-behavior: smooth;
+	color: ;
+}
+
+:root {
+	--cor0: white;
+	--cor1: black;
+	--cor2: #7a00ff;
+	--cor3: #2e2e2e;
+	--cor4: #F9FF00;
+}
+
+body {
+		background-color: var(--cor1);
+		margin: auto;
+		text-align: center;
+		max-width: 1440px;
+}
+
+p {
+		max-width: 520px;
+		margin: 30px;
+		text-align: justify;
+		color: var(--cor2);
+		font-size: 1em;
+}
+
+h1 {
+		color: var(--cor2);
+		font-size: 1.7em;
+		margin: 50px 0px;
+		font-weight: 700;
+}
+
+.header > img {
+		width: 70px;
+		display: inline;
+}
+
+.header nav > a {
+		border: solid 1px var(--cor2);
+		padding: 6px;
+		display: inline-block;
+		margin: 2px;
+		border-radius: 2px;
+		font-weight: 700;
+}
+
+.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: black;
+		height: 80px;
+}
+
+nav {
+		margin-right: 10%;
+}
+
+.lado> img {
+		width: 200px;
+}
+
+.lado {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 70px;
+}
+
+.header a:hover {
+		color: black;
+		border-color: var(--cor2);
+		background-color: var(--cor2);
+	}
+	
+.Butão {
+		display: none;
+}
+
+@media(Max-width: 600px){
+
+   #butao {
+   		display: block;
+   		background: transparent;
+   		border: transparent;
+   }
+   
+   #menu {
+   		display: block;
+   		visibility: hidden;
+   		overflow-y: hidden;
+   		z-index: 1000;
+   		position: absolute;
+   		width: 100%;
+   		height: cal(100vh - 80);
+   		right: -10px;
+   		font-size: 1.5em;
+   		margin-top: 20px auto;
+   		bottom: -310px;
+   		background-color: var(--cor1);
+   		transform: translateZ(100%);
+   		transition: 0.6s;
+   		animation: fade 2s;
+   }
+   
+   #menu > li > a {
+   		border: 1px solid var(--cor2);
+   		padding: 10px;
+   		display: block;
+   		margin: 20px;
+   		border-radius: 2px;
+   		font-weight: 500;
+   }
+   
+   .header {
+   		z-index: 1;
+   		display: flex;
+   		flex-direction: row;
+   		flex-wrap: wrap;
+   		background-color: black;
+   		width: 100%;
+   		margin: 0;
+   		padding: 0;
+   		top: 0%;
+   		position: fixed;
+   }
+   
+   #nav.active #menu {
+   		height: cal(100vh - 80px);
+   		visibility: visible;
+   		overflow-y: auto;
+   		transition: 0.6s;
+   }
+   
+   #x {
+   		border-bottom: 2px solid;
+   		width: 20px;
+   		height: 15px;
+   		color: var(--cor2);
+   }
+   
+   #x::after, #x::before {
+   		content: '';
+   		display: block;
+   		width: 20px;
+   		height: 2px;
+   		background: currentColor;
+   		margin-top: 5px;
+   		transition: 0.3s;
+   		position: relative;
+   }
+   	#nav.active #x {
+    color: black;
+    }
+  		#nav.active #x::before {
+    transform: rotate(135deg);
+    color: var(--cor2);
+  }
+ 		 #nav.active #x::after {
+    transform: rotate(-135deg);
+    top: -7px;
+    color: var(--cor2);
+  }
+  
+  .opa {
+  		margin-top: 100px;
+  }
+  
+  .header > img {
+  		margin: 10px 0px 20px 20px;
+  }
+}
+
+@media(min-width: 600px){
+		.header >img {
+		  margin-left: 10%;
+		}
+		
+		#menu {
+		display: flex;
+		font-size: 1em;
+}
+
+		#menu > li > a {
+				border: solid 1px var(--cor2);
+				display: inline-block;
+				padding: 5px;
+				margin: 7px;
+				border-radius: 2px;
+		   font-weight: 500;
+		}
+} 
+
+.bloco {
+		width: 270px;
+		height: 270px;
+		background-color: var(--cor1);
+		border-radius: 270px;
+		border: solid 2px var(--cor2);
+		overflow: hidden;
+}
+
+.bloco > img {
+		width: 269px;
+}
+
+.carinha {
+		color: var(--cor4);
+}
+
+.cv {
+		background-color: var(--cor1);
+		width: 300px;
+		height: 470px;
+		margin: 20px 20px;
+		border-radius: 3px;
+		border: solid 1px var(--cor2);
+}
+
+.div {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: row;
+		margin: auto;
+		text-align: center;
+}
+
+.Contato {
+	 
+}
+
+.git > a {
+		font-size: 2.3em;
+		margin: 5px 10px;
+		text-align: center;
+}
+
+.git {
+		margin: auto;
+}
+
+.git a:hover {
+		color: var(--cor4);
+}
+
+
+.div div > span {
+		font-size: 6em;
+		color: var(--cor2);
+		margin: 50px;
+		position: relative;
+		top: 30%;
+}
+
+
+.projetinho {
+		width: 90%;
+		height: 150px;
+		background-color: var(--cor2);
+		margin: auto;
+		border-radius: 3px;
+		position: relative;		
+}
+
+.projetinho > img {
+		width: 269px;
+		height: 149px;
+		border-radius: 3px;
+}
+h4 {
+		color: var(--cor2);
+		font-size: 1.5em;
+}
+
+.cv > a {
+		border: solid 1px var(--cor2);
+		padding: 9px;
+		margin: 20px 0px;
+		border-radius: 3px;
+		font-weight: 500;
+}
+
+
+.cv > a:hover {
+		color: var(--cor1);
+		background-color: var(--cor2);
+}
+
+h2 {
+		color: var(--cor2);
+		position: relative;
+		top: 40%;
+		font-weight: 600;
+}
+
+
+h3 {
+		position: relative;
+		top: 40%;
+		font-weight: 600;
+}
+
+.div > a {
+		color: black;
+}
+.div > a:hover {
+		color: var(--cor4);
+}
+
+.sobre {
+		margin: 0px 0px 150px;
+}
+
+a {
+		color: var(--cor2);
+}
+
+.Contato > div > p {
+		text-align: center;
+}
+
+.Contato {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 50px;
+}
+
+.Contato > div > a:hover {
+		color: var(--cor4);
+}
+
+.copy > p {
+		text-align: center;
+		margin: auto;
+		padding: 80px;
+}
+
+.p {
+		color: var(--cor4);
+}
+
+#menu {
+		
+}
+
+
+[data-anime] {
+		opacity: 0;
+		transition: .3s;
+}
+
+[data-anime="top"] {
+		transform: translate3d(0,-50px,0);
+}
+
+[data-anime].animate {
+		opacity: 1;
+		transform: translate3d(0px,0px,0px);
+}
+
+p{
+	animation: fadein 2s;
+	-webkit-animation: fadein 2s;
+	-maanoz-animation: fadein 2s;
+	-ms-animation: fadein 2s;
+}
+
+@keyframes fadein {
+from {
+opacity: 0.3;
+}
+to {
+ opacity: 1;
+}
+}
+
+@-moz-keyframes fadein { 
+from {
+ opacity: 0.3; 
+}
+ to { 
+opacity: 1; 
+}
+} 
+@-webkit-keyframes fadein { 
+from { 
+opacity: 0.3; 
+to {
+opacity: 1;
+}
+} 
+@-ms-keyframes fadein {
+from {
+opacity: 0.3;
+} to { 
+opacity: 1; 
+} 
+}​
+
+@keyframes fade {
+		from {
+				opacity: 0;
+				transform: translateX(50px);
+		}
+		to {
+				opacity: 1;
+				transform: translateX(0px);
+		}
+}
